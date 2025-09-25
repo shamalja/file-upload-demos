@@ -78,6 +78,8 @@ Software Consultant, Digital Marketing & SEO Strategist, Educator
 
 [LinkedIn](www.linkedin.com/in/shamal-jayawardhana)
 
+[LinkedIn](www.linkedin.com/in/shamal-jayawardhana)
+
 ## License
 
 This project is open-source and available under the [MIT License](https://github.com/shamalja/file-upload-demos/blob/main/LICENSE).
