@@ -80,4 +80,4 @@ Software Consultant, Digital Marketing & SEO Strategist, Educator
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT License](https://github.com/shamalja/file-upload-demos/blob/main/LICENSE).
