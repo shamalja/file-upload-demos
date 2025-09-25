@@ -46,7 +46,36 @@ It is a companion resource to the article:
 
 ### 1. Clone the repo
 
-`git clone https://github.com/your-username/php-file-upload-demo.git`
+`git clone https://github.com/shamalja/file-upload-demos.git`
 
-`cd secure-php-file-upload-demo`
+`cd file-upload-demos/Secure-PHP-FileUpload-Demo`
 
+### 2. Start PHP’s built-in server
+
+`php -S localhost:8000`
+
+### 3. Open in browser
+
+Go to: http://localhost:8000/secure-php-file-upload-script.php
+
+## Requirements
+
+- PHP 7.0 or later
+- No database required
+- Works out-of-the-box on localhost
+
+## Learn More
+
+- [PHP official documentation](https://www.php.net/manual/en/features.file-upload.php)
+- [Let’s Encrypt – Free SSL Certificates](https://letsencrypt.org/)
+- Full Article → Top 6 Mistakes to Avoid in Your PHP File Upload Script
+
+## Author
+
+**Shamal Jayawardhana**
+Software Consultant, Digital Marketing Strategist, Educator
+🔗 [LinkedIn](www.linkedin.com/in/shamal-jayawardhana)
+
+## License
+
+This project is open-source and available under the MIT License.
