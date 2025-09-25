@@ -45,7 +45,7 @@ Install the Filestack PHP SDK via Composer:
 
   ✅ On success, it will output the URL of the uploaded file.
 
-## 📝 Code Example\
+## 📝 Code Example
 
 ```
 require_once 'vendor/autoload.php';
