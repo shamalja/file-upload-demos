@@ -27,6 +27,7 @@ This repository provides a simple and secure example of how to upload files usin
 Clone the repo:
 
 `git clone https://github.com/shamalja/file-upload-demos.git`
+
 `cd file-upload-demos/filestack-php-file-upload-demo`
 
 Install the Filestack PHP SDK via Composer:
