@@ -71,10 +71,12 @@ You can configure file type filters, size restrictions, and storage options from
 ## 📁 Folder Structure
 
 ```
-Secure-PHP-FileUpload-Demo/
+filestack-php-file-upload-demo/
 ├── vendor/                     # Composer dependencies
 ├── filestack-php-file-upload-example.php
 ├── composer.json
+├── composer.lock
+├── test-file.jpg       ← (this should be a sample image or PDF you want to upload)
 └── README.md
 ```
 
