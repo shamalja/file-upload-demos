@@ -3,7 +3,7 @@
 This repository provides a fully functional and secure **PHP file upload script**, built using best practices to prevent common file upload vulnerabilities.
 
 It is a companion resource to the article:  
-**[Top 6 Mistakes to Avoid in Your PHP File Upload Script](https://yourwebsite.com/php-file-upload-script-mistakes)**  
+**[Top 6 Mistakes to Avoid in Your PHP File Upload Script](https://blog.filestack.com/php-file-upload-script-mistakes/)**  
 
 ---
 
@@ -68,7 +68,7 @@ Go to: http://localhost:8000/secure-php-file-upload-script.php
 
 - [PHP official documentation](https://www.php.net/manual/en/features.file-upload.php)
 - [Let’s Encrypt – Free SSL Certificates](https://letsencrypt.org/)
-- Full Article → Top 6 Mistakes to Avoid in Your PHP File Upload Script
+- Full Article → [Top 6 Mistakes to Avoid in Your PHP File Upload Script](https://blog.filestack.com/php-file-upload-script-mistakes/)
 
 ## Author
 
