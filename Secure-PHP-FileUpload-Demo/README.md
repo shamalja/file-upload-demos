@@ -73,7 +73,9 @@ Go to: http://localhost:8000/secure-php-file-upload-script.php
 ## Author
 
 **Shamal Jayawardhana**
-Software Consultant, Digital Marketing Strategist, Educator
+
+Software Consultant, Digital Marketing & SEO Strategist, Educator
+
 🔗 [LinkedIn](www.linkedin.com/in/shamal-jayawardhana)
 
 ## License
