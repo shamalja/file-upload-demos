@@ -76,8 +76,7 @@ Go to: http://localhost:8000/secure-php-file-upload-script.php
 
 Software Consultant, Digital Marketing & SEO Strategist, Educator
 
-[LinkedIn](www.linkedin.com/in/shamal-jayawardhana)
-
+[LinkedIn](https://www.linkedin.com/in/shamal-jayawardhana)
 
 ## License
 
