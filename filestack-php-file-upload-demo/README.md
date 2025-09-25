@@ -79,7 +79,7 @@ Secure-PHP-FileUpload-Demo/
 
 ## 📄 License
 
-This demo is open-source and available under the [MIT License]().
+This demo is open-source and available under the [MIT License](https://github.com/shamalja/file-upload-demos/blob/main/LICENSE).
 
 ## 🙋‍♂️ Author
 
