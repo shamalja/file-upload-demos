@@ -2,6 +2,9 @@
 
 This repository provides a simple and secure example of how to upload files using the [Filestack PHP SDK](https://github.com/filestack/filestack-php).
 
+It is a companion resource to the article:
+[Top 6 Mistakes to Avoid in Your PHP File Upload Script](https://blog.filestack.com/php-file-upload-script-mistakes/)
+
 > ✅ This demo uses Composer for dependency management and showcases a basic local file upload.
 
 ---
