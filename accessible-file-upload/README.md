@@ -80,10 +80,10 @@ No external dependencies. Just open `index.html` in your browser.
 Accessibility in HTML File Upload: Best Practices for Inclusive Design
 
 ---
-  
-## 📄 License
 
-MIT – free to use, modify, and share.
+## 📝 License
+
+This project is licensed under the [MIT License](https://github.com/shamalja/file-upload-demos/blob/main/LICENSE) — free to use, modify, and share.
 
 
 
