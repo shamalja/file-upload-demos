@@ -43,5 +43,12 @@ No external dependencies. Just open `index.html` in your browser.
 
 1. Clone the repository:
 
-`git clone https://github.com/yourusername/accessible-file-upload.git`
-`cd accessible-file-upload`
+`git clone https://github.com/shamalja/file-upload-demos.git`
+
+`cd file-upload-demos/accessible-file-upload`
+
+2.	Open index.html in any modern browser or with Live Server in VS Code.
+
+---
+
+
