@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible HTML File Upload Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+    h2 {
+      margin-top: 3rem;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    #drop-zone {
+      border: 2px dashed #aaa;
+      padding: 30px;
+      text-align: center;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    #uploadStatus {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessible HTML File Upload Examples</h1>
+
+  <!-- 1. Labeled file input -->
+  <h2>1. Proper Labeling</h2>
+  <label for="resumeUpload">Upload your resume (PDF only):</label>
+  <input type="file" id="resumeUpload" aria-describedby="resumeHelp">
+  <p id="resumeHelp">Only PDF files under 2MB are accepted. Required for application.</p>
+
+  <!-- 2. Screen Reader Compatible File Upload -->
+  <h2>2. Screen Reader Compatibility</h2>
+  <label for="fileInput2" class="visually-hidden">Upload your resume</label>
+  <input 
+    type="file" 
+    id="fileInput2" 
+    aria-describedby="fileInstructions" 
+    accept=".pdf"
+  >
+  <p id="fileInstructions">Only PDF files up to 2MB are allowed. This field is required.</p>
+
+  <!-- 3. Drag-and-drop with fallback -->
+  <h2>3. Drag-and-Drop With Fallback</h2>
+  <label for="fileUpload">Upload your file:</label>
+  <input 
+    type="file" 
+    id="fileUpload" 
+    aria-describedby="uploadHelp" 
+    accept=".pdf,.docx"
+  >
+  <div 
+    id="drop-zone"
+    ondrop="handleDrop(event)"
+    ondragover="event.preventDefault()"
+    tabindex="0"
+    role="button"
+    aria-label="Drop your file here or use the file input above"
+  >
+    Drag and drop your file here
+  </div>
+  <p id="uploadHelp">You can either drag and drop your file or use the file input above. Only PDF or DOCX files are allowed.</p>
+
+  <!-- 4. ARIA Live Feedback -->
+  <h2>4. Upload Progress Feedback</h2>
+  <label for="uploadFile2">Choose a file to upload:</label>
+  <input type="file" id="uploadFile2" onchange="uploadFileAccessible()">
+  <div id="uploadStatus" aria-live="polite"></div>
+
+  <!-- 5. Fully Accessible Upload (Combined Best Practices) -->
+  <h2>5. Fully Accessible Upload (Best Practice Example)</h2>
+  <label for="combinedUpload">Upload your resume (PDF only):</label>
+  <input 
+    type="file" 
+    id="combinedUpload" 
+    aria-describedby="combinedHelp" 
+    accept=".pdf"
+    onchange="handleCombinedUpload()"
+  >
+  <p id="combinedHelp">Max file size: 2MB. Required field.</p>
+  <div id="combinedStatus" aria-live="polite"></div>
+
+  <script>
+    function uploadFileAccessible() {
+      const status = document.getElementById("uploadStatus");
+      status.textContent = "Uploading file... please wait.";
+      setTimeout(() => {
+        status.textContent = "Upload complete! Your file was uploaded successfully.";
+      }, 2000);
+    }
+
+    function handleDrop(event) {
+      event.preventDefault();
+      const file = event.dataTransfer.files[0];
+      alert(`You dropped: ${file.name}`);
+    }
+
+    function handleCombinedUpload() {
+      const status = document.getElementById("combinedStatus");
+      status.textContent = "Uploading your file...";
+      setTimeout(() => {
+        status.textContent = "Upload complete! Your resume was uploaded successfully.";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
