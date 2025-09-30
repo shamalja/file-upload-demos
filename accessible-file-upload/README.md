@@ -47,7 +47,7 @@ No external dependencies. Just open `index.html` in your browser.
 
 `cd file-upload-demos/accessible-file-upload`
 
-2.	Open index.html in any modern browser or with Live Server in VS Code.
+2.	Open index.html in any modern browser or with Live Server in VS Code. Learn how to [use a local HTTP server to test your web apps locally](https://webdevhub.dev/how-to-use-local-http-server-test-web-apps/).
 
 ---
 
