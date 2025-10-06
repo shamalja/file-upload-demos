@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-File Upload with Preview and Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .upload-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        .upload-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .file-input {
+            margin-bottom: 20px;
+        }
+        .file-input input {
+            display: none;
+        }
+        .file-input label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-input label:hover {
+            background-color: #0056b3;
+        }
+        .preview {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .preview img {
+            max-width: 100px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            height: 20px;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+        .message {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .message.success {
+            color: green;
+        }
+        .message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload Files</h1>
+        <form id="uploadForm">
+            <div class="file-input">
+                <input type="file" id="fileInput" name="files" accept="image/*,application/pdf" multiple required>
+                <label for="fileInput">Choose Files</label>
+            </div>
+            <div class="preview" id="preview"></div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const files = event.target.files;
+            const preview = document.getElementById('preview');
+            const message = document.getElementById('message');
+
+            preview.innerHTML = '';
+            message.textContent = '';
+
+            if (files.length === 0) {
+                message.textContent = 'No files selected.';
+                message.className = 'message error';
+                return;
+            }
+
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf'];
+
+            Array.from(files).forEach(file => {
+                if (file.size > maxSize) {
+                    message.textContent = `File size of ${file.name} exceeds 5MB.`;
+                    message.className = 'message error';
+                    return;
+                }
+
+                if (!allowedTypes.includes(file.type)) {
+                    message.textContent = `Invalid file type for ${file.name}.`;
+                    message.className = 'message error';
+                    return;
+                }
+
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        preview.appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                } else if (file.type === 'application/pdf') {
+                    const fileElement = document.createElement('div');
+                    fileElement.textContent = `PDF: ${file.name}`;
+                    preview.appendChild(fileElement);
+                }
+            });
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;
+            const message = document.getElementById('message');
+            const progressBar = document.getElementById('progressBar');
+
+            if (files.length === 0) {
+                message.textContent = 'No files selected.';
+                message.className = 'message error';
+                return;
+            }
+
+            const formData = new FormData();
+            Array.from(files).forEach(file => {
+                formData.append('files', file);
+            });
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:5500/upload', true);
+
+            xhr.upload.onprogress = function(event) {
+                if (event.lengthComputable) {
+                    const percentComplete = (event.loaded / event.total) * 100;
+                    progressBar.style.width = percentComplete + '%';
+                }
+            };
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    message.textContent = 'Files uploaded successfully!';
+                    message.className = 'message success';
+                } else {
+                    message.textContent = 'Error uploading files.';
+                    message.className = 'message error';
+                }
+            };
+
+            xhr.onerror = function() {
+                message.textContent = 'Error uploading files.';
+                message.className = 'message error';
+            };
+
+            xhr.send(formData);
+        });
+    </script>
+</body>
+</html>
