@@ -83,6 +83,6 @@ Uploaded files will appear in the uploads/ folder.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/shamalja/file-upload-demos/blob/main/LICENSE).
 
 
