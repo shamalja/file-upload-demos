@@ -68,7 +68,7 @@ Copy and paste the server address (e.g., http://127.0.0.1:8080) into your browse
 
 ### Final Testing Steps
 
--Go to your browser tab where Live Server opened the HTML page.
+- Go to your browser tab where Live Server opened the HTML page.
 
 - Choose multiple images or PDFs.
 
