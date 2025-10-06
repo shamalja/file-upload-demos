@@ -77,7 +77,7 @@ Copy and paste the server address (e.g., http://127.0.0.1:8080) into your browse
 - You’ll see:
   - Progress bar updates
   - Preview thumbnails
-	- Success or error message
+  - Success or error message
 
 Uploaded files will appear in the uploads/ folder.
 
