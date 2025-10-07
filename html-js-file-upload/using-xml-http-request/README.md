@@ -85,7 +85,7 @@ Uploaded files will appear in the uploads/ folder.
 
 When using JavaScript for file uploads and user feedback, it’s important to ensure compatibility across modern browsers. Here are the key features used in this project and their browser support:
 
-⸻
+---
 
 ### 📦 FormData
 
@@ -99,7 +99,7 @@ Used to construct key/value pairs representing form fields and their values, esp
 
 💡 Note: IE10+ supports FormData but may lack full support for methods like .entries().
 
-⸻
+---
 
 ### 🔄 XMLHttpRequest.upload.onprogress
 
@@ -113,7 +113,7 @@ Used to monitor the progress of a file upload.
 
 ⚠️ Note: For Internet Explorer, onprogress is supported only in IE10 and above.
 
-⸻
+---
 
 ### 🔁 Array.from()
 
@@ -126,7 +126,7 @@ Used to convert FileList to an array for easier manipulation.
 
 ⚠️ Fallback Tip: Use [].slice.call(files) as a polyfill for older browsers.
 
-⸻
+---
 
 ### ✅ Progress Element (<progress>)
 
@@ -140,7 +140,7 @@ Displays visual feedback of the upload progress.
 
 🎨 Note: Custom styling of the <progress> element may behave differently across browsers.
 
-⸻
+---
 
 ### 🧪 How to Ensure Compatibility
 	•	✅ Always test your upload forms in multiple browsers (Chrome, Firefox, Edge, Safari).
