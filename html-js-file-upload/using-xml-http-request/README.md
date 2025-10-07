@@ -90,12 +90,12 @@ When using JavaScript for file uploads and user feedback, it’s important to en
 ### 📦 FormData
 
 Used to construct key/value pairs representing form fields and their values, especially for files.
-	•	✅ Supported in all major modern browsers:
-	•	Chrome 7+
-	•	Firefox 4+
-	•	Safari 5+
-	•	Edge 12+
-	•	IE 10+ (Limited support)
+✅ Supported in all major modern browsers:
+- Chrome 7+
+- Firefox 4+
+- Safari 5+
+- Edge 12+
+- IE 10+ (Limited support)
 
 💡 Note: IE10+ supports FormData but may lack full support for methods like .entries().
 
@@ -104,12 +104,12 @@ Used to construct key/value pairs representing form fields and their values, esp
 ### 🔄 XMLHttpRequest.upload.onprogress
 
 Used to monitor the progress of a file upload.
-	•	✅ Supported in:
-	•	Chrome 7+
-	•	Firefox 3.6+
-	•	Safari 5+
-	•	Edge
-	•	IE 10+
+✅ Supported in:
+- Chrome 7+
+- Firefox 3.6+
+- Safari 5+
+- Edge
+- IE 10+
 
 ⚠️ Note: For Internet Explorer, onprogress is supported only in IE10 and above.
 
@@ -118,11 +118,11 @@ Used to monitor the progress of a file upload.
 ### 🔁 Array.from()
 
 Used to convert FileList to an array for easier manipulation.
-	•	✅ Supported in:
-	•	Chrome 45+
-	•	Firefox 32+
-	•	Safari 9+
-	•	Edge 12+
+✅ Supported in:
+- Chrome 45+
+- Firefox 32+
+- Safari 9+
+- Edge 12+
 
 ⚠️ Fallback Tip: Use [].slice.call(files) as a polyfill for older browsers.
 
@@ -131,21 +131,23 @@ Used to convert FileList to an array for easier manipulation.
 ### ✅ Progress Element (<progress>)
 
 Displays visual feedback of the upload progress.
-	•	✅ Supported in:
-	•	Chrome 6+
-	•	Firefox 16+
-	•	Safari 6+
-	•	Edge
-	•	IE 10+ (with limited styling)
+✅ Supported in:
+- Chrome 6+
+- Firefox 16+
+- Safari 6+
+- Edge
+- IE 10+ (with limited styling)
 
 🎨 Note: Custom styling of the <progress> element may behave differently across browsers.
 
 ---
 
 ### 🧪 How to Ensure Compatibility
-	•	✅ Always test your upload forms in multiple browsers (Chrome, Firefox, Edge, Safari).
-	•	✅ Consider polyfills or fallback methods for older browsers.
-	•	✅ Use feature detection where possible instead of browser detection.
+✅ Always test your upload forms in multiple browsers (Chrome, Firefox, Edge, Safari).
+
+✅ Consider polyfills or fallback methods for older browsers.
+
+✅ Use feature detection where possible instead of browser detection.
 
 ## 📄 License
 
