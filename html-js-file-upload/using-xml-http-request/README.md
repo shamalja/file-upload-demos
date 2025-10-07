@@ -90,6 +90,7 @@ When using JavaScript for file uploads and user feedback, it’s important to en
 ### 📦 FormData
 
 Used to construct key/value pairs representing form fields and their values, especially for files.
+
 ✅ Supported in all major modern browsers:
 - Chrome 7+
 - Firefox 4+
@@ -104,6 +105,7 @@ Used to construct key/value pairs representing form fields and their values, esp
 ### 🔄 XMLHttpRequest.upload.onprogress
 
 Used to monitor the progress of a file upload.
+
 ✅ Supported in:
 - Chrome 7+
 - Firefox 3.6+
@@ -118,6 +120,7 @@ Used to monitor the progress of a file upload.
 ### 🔁 Array.from()
 
 Used to convert FileList to an array for easier manipulation.
+
 ✅ Supported in:
 - Chrome 45+
 - Firefox 32+
@@ -131,6 +134,7 @@ Used to convert FileList to an array for easier manipulation.
 ### ✅ Progress Element (<progress>)
 
 Displays visual feedback of the upload progress.
+
 ✅ Supported in:
 - Chrome 6+
 - Firefox 16+
